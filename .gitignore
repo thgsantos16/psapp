@@ -2,4 +2,5 @@ xml/*
 tpl/*
 json/*
 private/*
+.sass-cache/*
 conexao.php
