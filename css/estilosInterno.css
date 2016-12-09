@@ -1,0 +1,382 @@
+#linhaCabecalho {
+	width: 100%;
+	height: 52px;
+	position: fixed;
+	background-image: url(img/fundo_topo.jpg);
+    top: 0px;
+    z-index: 9999;
+}
+
+#container {
+	margin: -8px;
+}
+
+.slot {
+	width: 47%;
+	margin-right: 1.5%;
+	margin-top: 2.5%;
+	display: inline-block;
+	min-height: 106px;
+	border: 2px dashed #CCC;
+    vertical-align: top;
+    padding-bottom:  25px;
+}
+
+div#colunaCabecalho {
+    height: 100%;
+    width: 70px;
+    position: fixed;
+    top: 52px;
+    background: #333;
+}
+
+div#corpo {
+    margin-left: 70px;
+    display: inline-block;
+    width: 88%;
+    margin-top: 52px;
+}
+
+.slot h2 {
+    background: #2F795F;
+    color: #FFF;
+    padding: 10px 0;
+    margin-top: 0;
+    font-family: eras ITC Light;
+    font-weight: normal;
+}
+
+#logoAdmin img {
+    display: inline-block;
+    left: 0px;
+    position: absolute;
+    margin: 4px 0 0 8px;
+}
+
+.menuLateral img {
+    width: 30px;
+}
+
+a.menuLateral {
+    display: block;
+    margin-top: 12px;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: eras ITC light;
+    opacity: 0.7;
+    transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+a.menuLateral:hover {
+    opacity: 1;
+}
+
+img.miniaturaEdit {
+    max-width: 30%;
+}
+
+.menuLateral span.texto {
+    background-color: #525252;
+    position: absolute;
+    margin-left: 19px;
+    padding: 7px 0px;
+    font-size: 20px;
+    margin-top: -3px;
+    width: 0px;
+    text-align: center; 
+    overflow: hidden;
+    transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.menuLateral:hover span.texto {
+    background-color: #525252;
+    position: absolute;
+    margin-left: 19px;
+    padding: 7px 12px;
+    font-size: 20px;
+    margin-top: -3px;
+    width: 106px;
+}
+
+div#conteudoAdmin {
+    border: 1px solid #DDD;
+    margin-top: 1.6%;
+    width: 68%;
+    margin-left: 52px;
+    padding: 16px 16px 34px;
+    color: #434343;
+    font-family: eras ITC light;
+    font-size: 20px;
+    background: #FFF;
+    font-weight: bold;
+    margin-bottom: 7%;
+}
+
+.slot p {
+    color: #434343;
+    font-family: eras ITC;
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+
+
+h1.tituloSecao {
+    border: 1px solid #252525;
+    width: 68%;
+    margin-left: 52px;
+    padding: 16px;
+    color: #434343;
+    font-family: eras ITC light;
+    font-size: 25px;
+    background: #252525;
+    color: #FFF;
+    margin-top: 79px;
+}
+
+a.botaoNovo, a.botaoSalvar {
+    background: #246B86;
+    left: -24%;
+    display: block;
+    width: 20%;
+    position: relative;
+    margin-left: 52px;
+    padding: 16px;
+    margin-top: 1.6%;
+    color: #FFF;
+    font-size: 20px;
+    font-family: eras ITC light;
+    background-position: center;
+    cursor: pointer;
+    background-image: url(img/bg2.jpg);
+}
+
+a.botaoNovo:hover, a.botaoSalvar:hover {
+	animation: animatedBackground 1s linear infinite;
+}
+
+
+
+@keyframes animatedBackground {
+	0% { background-image: url(img/bg2.jpg); }
+	33% { background-image: url(img/bg3.jpg); }
+	66% { background-image: url(img/bg1.jpg); }
+	100% { background-image: url(img/bg2.jpg); }
+}
+
+#conteudoAdmin p {
+    margin: 16px 0 3px;
+}
+
+#conteudoAdmin input, #conteudoAdmin select, #conteudoAdmin textarea {
+    display: block;
+    border: #ccc solid 1px;
+    padding: 7px 16px;
+    min-width: 304px;
+    width: 50%;
+    height: 25px;
+    color: #434343;
+    font-family: eras ITC light;
+    background-color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a.botaoSalvar {
+    left: 0;
+    margin-left: 0;
+}
+
+h2.tituloSubSecao {
+    margin: 7px 0 25px;
+    border-bottom: 1px solid #AAA;
+    padding-bottom: 16px;
+    width: 70%;
+}
+
+.item {
+    width: 90%;
+    padding: 12px 0;
+}
+
+.item.even {
+    background: #DDD;
+}
+
+span.edit img, span.excluir img {
+    width: 16px;
+}
+
+span.excluir, a.excluir {
+    padding: 5px 7px 9px;
+    background: rgba(223,79,106,0.7);
+    border: 1px solid rgb(178,70,88);
+    margin: -5px 7px;
+    height: 16px;
+    cursor: pointer;
+    display: inline-block;
+    color: #FFF;
+    vertical-align: top;
+    float: right;
+}
+
+span.excluir:hover, a.excluir:hover {
+    background: rgba(223,79,106,1);
+}
+
+span.excluir.olho {
+    background: rgba(46, 173, 104, 0.5);
+    border: #259265 1px solid;
+}
+
+span.excluir.olho:hover {
+    background: rgba(46, 173, 104, 0.88);
+}
+span.edit, a.edit {
+    padding: 5px 7px 9px;
+    background: rgba(79,142,223,0.7);
+    border: 1px solid #246B86;
+    height: 16px;
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    margin: -5px 0;
+}
+
+span.edit:hover, a.edit:hover {
+    background: rgba(79,142,223,1);
+}
+
+span.nomeItem {
+    display: inline-block;
+    width: 61%;
+    font-family: eras ITC Light;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#alerta {
+    font-family: eras ITC Light;
+}
+
+#conteudoAdmin #inserirImovel select {
+    height: 43px;
+    width: 53%;
+        text-align: center;
+}
+
+#conteudoAdmin #inserirImovel textarea {
+    height: 160px;
+    resize: none;
+}
+
+a.botaoAdd {
+    margin-top: 1.6%;
+    display: block;
+    padding: 16px 0;
+    border: #AAA solid 1px;
+    width: 30%;
+    cursor: pointer;
+    background: #999;
+    color: #FFF;
+}
+
+a.botaoAdd:hover {
+    background: #777;
+}
+
+.formMetade {
+    width: 30%;
+    display: inline-block;
+    margin-right: 3%;
+    min-width: 340px;
+}
+
+#conteudoAdmin .formMetade input, #conteudoAdmin .formMetade select {
+    width: 90%;
+}
+
+#loading {position:absolute;left:calc(50% - 100px);top:calc(50% - 25px);z-index:9999}
+.uil-ripple {position:absolute;left:calc(50% - 90px);top:calc(50% - 90px);opacity:.5;z-index:999}
+
+.ld-l {opacity:0;animation: ld-in 3s 0.0s ease infinite;}
+.ld-o {opacity:0;animation: ld-in 3s 0.1s ease infinite;}
+.ld-a {opacity:0;animation: ld-in 3s 0.2s ease infinite;}
+.ld-d {opacity:0;animation: ld-in 3s 0.3s ease infinite;}
+.ld-i {opacity:0;animation: ld-in 3s 0.4s ease infinite;}
+.ld-n {opacity:0;animation: ld-in 3s 0.5s ease infinite;}
+.ld-g {opacity:0;animation: ld-in 3s 0.6s ease infinite;}
+.spinner {animation: ld-sp 3s ease infinite;}
+
+@keyframes ld-in {
+  0% {opacity:0;transform:scale(0);}
+  30% {opacity:1;transform:scale(1);}
+  100% {opacity:1;transform:scale(1);}
+}
+
+div#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(256,256,256,0.79);
+    z-index: 9999;
+}
+
+.progressBarFeliz {
+    z-index: 99999;
+    position: fixed;
+    width: 40%;
+    border: #999 solid 1px;
+    height: 34px;
+    left: 30%;
+    top: 25%;
+    text-align: left;
+}
+
+.meter {
+    animation: animatedBackground 2s linear infinite;
+    height: 34px;
+    display: inline-block;
+    width: 0%;
+    transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+#textProgress {
+    position: absolute; 
+    text-align: center;
+    margin-top: -32px;
+}
+
+a.excluir, a.edit {
+    padding-bottom: 16px;
+}
+
+#conteudoAdmin .grandeImagem {
+    width: 70%;
+    max-width: 700px;
+    height: 403px;
+    background-size: cover;
+    margin: 16px 0;
+}
+
+span.views {
+    background: #2F795F;
+    color: #FFF;
+    padding: 7px 12px;
+    margin-top: 0;
+    font-family: eras ITC Light;
+    font-weight: normal;
+    float: right;
+    margin: -3px 7px 0 0;
+}

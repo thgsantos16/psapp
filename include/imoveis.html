@@ -1,0 +1,66 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script>
+
+function novoImovel() {       
+
+            var login_result = $('#conteudoAdmin');
+        
+            var UrlToPass = 'a';
+            $.ajax({ // Send the credential values to another checker.php using Ajax in POST menthod
+            type : 'POST',
+            data : UrlToPass,
+            url  : 'novoImovel.php',
+            success: function(responseText){ // Get the result and asign to each cases
+                if(responseText == 0){
+                    login_result.html('<span class="error">Usuário ou Senha Inocorretos!</span>');
+                }
+                else {
+                    login_result.html(responseText);
+                }
+            }
+            });
+        
+        return false;
+    }
+        
+</script>
+
+<h1 class="tituloSecao">Imóveis</h1>
+
+<a class="botaoNovo" onclick="novoImovel()">Cadastrar Novo Imóvel</a>
+
+<div id="conteudoAdmin">
+
+<?
+
+$sql = "select * from imoveis ORDER BY id DESC";
+$res = mysql_query($sql, $con);
+$num_tipo = mysql_num_rows($res);
+
+if($num_tipo == 0) echo "Nenhum Resultado encontrado!";
+
+        for ($i=0; $i<$num_tipo; $i++) {
+
+        $row = mysql_fetch_array($res);
+
+        $cod = $row["id"];
+
+        $nome = $row["nome"];
+
+        if($i == 0) echo "<h2 class='tituloSubSecao'>Lista de Imóveis</h2>";
+
+       
+
+       if($i%2 == 0) echo "<div class='item even'><span class='nomeItem'>".$nome."</span><span class='edit'><img src='img/edit.png'></span><span class='excluir'><img src='img/excluir.png'></span></div>";
+       else echo "<div class='item odd'><span class='nomeItem'>".$nome."</span><span class='edit'><img src='img/edit.png'></span><span class='excluir'><img src='img/excluir.png'></span></div>";
+
+
+
+    }
+
+
+?>
+
+
+</div>

@@ -1,0 +1,66 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+@mixin size($w, $h : $w) {
+	width: $w;
+	height: $h;
+}
+
+@mixin bg($c, $i, $s : cover) {
+	background: $c $i;
+	background-size: $s;
+}
+
+@mixin transition($a, $t, $e : ease) {
+	-webkit-transition: $a $t $e;
+	   -moz-transition: $a $t $e;
+	    -ms-transition: $a $t $e;
+	     -o-transition: $a $t $e;
+	        transition: $a $t $e;
+}
+
+body {
+	@include bg(#eee, url(../img/fundo_admin.jpg));
+}
+
+#login form {
+	@include size(28%, auto);
+    margin: 52px auto 0;
+    background: #FFF;
+    text-align: center;
+    padding: 25px 0 52px;
+    box-shadow: 1px 1px 7px rgba(0,0,0,.7);
+}
+
+img#logoLogin {
+	@include size(304px, auto);
+    margin: 25px auto;
+    display: block;
+}
+
+#login input {
+	@include size(61%, 52px);
+    display: block;
+    border: 1px solid #DDD;
+    background: #333;
+    margin: 7px auto;
+    padding: 0 12px;
+    color: #DDD;
+    font-size: 16px;
+}
+
+p#erroLogin {
+	@include size(28%, auto);
+    display: block;
+    margin: 7px auto;
+    background: rgba(172, 19, 19, 0.78);
+    padding: 16px 0;
+    text-align: center;
+    color: #EEE;
+    font-family: calibri;
+    font-size: 18px;
+}

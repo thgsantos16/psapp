@@ -1,0 +1,25 @@
+<?
+
+$sql = "select * from servicos ORDER BY id DESC";
+$res = mysql_query($sql, $con);
+$num_tipo = mysql_num_rows($res);
+
+        for ($i=0; $i<$num_tipo && $i<5; $i++) {
+
+        $row = mysql_fetch_array($res);
+
+        $cod = $row["id"];
+
+        $nome = $row["nome"];
+
+        if($num_tipo == 0) echo "<p>Nenhum Resultado encontrado!</p>";
+        else if($i == 0) echo "";
+
+
+        if($i%2 == 0) echo "<div class='item even'><span class='nomeItem'>".$nome."</span><span class='excluir'><img src='img/excluir.png'></span><span class='edit'><img src='img/edit.png'></span></div>";
+        else echo "<div class='item odd'><span class='nomeItem'>".$nome."</span><span class='excluir'><img src='img/excluir.png'></span><span class='edit'><img src='img/edit.png'></span></div>";
+
+   }
+
+
+?>
